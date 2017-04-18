@@ -18,3 +18,7 @@ class HtmlOutputer(object):
 
     def output_html(self):
         print('down')
+
+
+class Output(object):
+    pass

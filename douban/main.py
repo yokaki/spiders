@@ -24,7 +24,7 @@ class DoubanMovie(object):
                 count += 1
 
             except Exception as e:
-                print('craw faild: ', e)
+                print('craw failed: ', e)
         self.outputer.output_html()
 
 

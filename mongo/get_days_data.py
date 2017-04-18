@@ -6,4 +6,3 @@ collection = db.days
 day_list = []
 for i in collection.find():
     print(i['day'])
-

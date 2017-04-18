@@ -1,15 +1,15 @@
-import downloader
+import zhihu_downloader
 import html_parser
 import url_manager
-import outputer
+import zhihu_collect
 
 
 class Main(object):
     def __init__(self):
         self.urls = url_manager.UrlManager()
-        self.downloader = downloader.HtmlDownloader()
+        self.downloader = zhihu_downloader.HtmlDownloader()
         self.parser = html_parser.HtmlParser()
-        self.outputer = outputer.HtmlOutputer()
+        self.outputer = zhihu_collect.HtmlOutputer()
 
     def draw(self, first_url):
         count = 1
