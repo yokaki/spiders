@@ -1,20 +1,20 @@
 import json
+from pymongo import MongoClient
 
 
 class HtmlOutputer(object):
     def __init__(self):
-        self.datas = []
+        self.test = []
 
     def collect_data(self, data):
         if data is None:
+            self.test.append(1)
             return
-        self.datas.append(data)
+        client = MongoClient()
+        db = client.meizi
+        collection = db.url_list
+        for i in data:
+            collection.insert(i)
 
     def output_html(self):
-        num = 1
-        for d in self.datas:
-            d = json.dumps(d, ensure_ascii=False)
-            f = open('./data/meizi' + str(num) + '.json', 'w', encoding='utf8')
-            f.write(d)
-            f.close()
-            num += 1
+        print('down')

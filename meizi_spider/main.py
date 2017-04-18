@@ -23,7 +23,7 @@ class Main(object):
                 self.urls.add_new_urls(link)
                 self.outputer.collect_data(new_data)
                 count += 1
-                if count == 500:
+                if count == 3:
                     break
             except Exception as e:
                 print('craw faild', e)

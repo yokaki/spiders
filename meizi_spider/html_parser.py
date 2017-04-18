@@ -14,7 +14,8 @@ class HtmlParser(object):
         img_list = soup.find_all('img', src=re.compile(r'//wx*?'))
         src_list = []
         for i in img_list:
-            src_list.append('http:'+i.get('src'))
+            src = 'http:' + i.get('src')
+            src_list.append({'src':src})
         return src_list
 
     def parse(self, page_url, html_content):
